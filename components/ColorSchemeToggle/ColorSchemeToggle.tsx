@@ -5,10 +5,9 @@ export function ColorSchemeToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
 
   return (
-    <Group position="center" mt="xl">
       <ActionIcon
         onClick={() => toggleColorScheme()}
-        size="xl"
+        size="md"
         sx={(theme) => ({
           backgroundColor:
             theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
@@ -16,11 +15,10 @@ export function ColorSchemeToggle() {
         })}
       >
         {colorScheme === 'dark' ? (
-          <SunIcon width={20} height={20} />
+          <SunIcon width={15} height={15} />
         ) : (
-          <MoonIcon width={20} height={20} />
+          <MoonIcon width={15} height={15} />
         )}
       </ActionIcon>
-    </Group>
   );
 }
